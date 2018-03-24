@@ -41,35 +41,35 @@ public class RegularExpressions {
 				    	String total = "";
 		    			int posInd = 0;
 		    			
-		    	while(lineInd < fileLine.length() && posInd < inputLength)
-		    		{
-		    			if(array[lineInd] != regex[posInd]) 		//break if characters match at position
-	    			     	{
-	    					check = false;
-	    					break; 
-	    				    }	
+		while(lineInd < fileLine.length() && posInd < inputLength)
+			{
+			if(array[lineInd] != regex[posInd]) 		//break if characters match at position
+	    	{
+	    	check = false;
+	    	break; 
+	        }	
 
 		   
 
 		    	    		
-			    if (array[lineInd] == regex[posInd]) //if next position isnt equal to next pos in input, increase pos
-			    			{
-					    		char	 word = array[lineInd];
-			    				 total = total + word;
-					    	}
-					    		lineInd++;
-					    		posInd++;   
+		 if (array[lineInd] == regex[posInd]) //if next position isnt equal to next pos in input, increase pos
+			{
+			char	 word = array[lineInd];
+			 total = total + word;
+			}
+			lineInd++;
+			posInd++;   
 					    		
-//					 			//if (regex[posInd+1] == '*' && lineInd < fileLine.length() && posInd < inputLength)    //PLUS
-//				    			 if (regex[posInd+1] == '*' && posInd < inputLength)    //PLUS
-//				    				{
-//				    						while(array[lineInd] == regex[posInd] && lineInd < fileLine.length())
-//				    						{
-//				    						char mult = array[lineInd];
-//				    						total = total + mult;
-//				    						lineInd++;
-//				    				}
-//				    				}
+//			//if (regex[posInd+1] == '*' && lineInd < fileLine.length() && posInd < inputLength)    //PLUS
+//		     if (regex[posInd+1] == '*' && posInd < inputLength)    //PLUS
+//			{
+//			while(array[lineInd] == regex[posInd] && lineInd < fileLine.length())
+//			{
+//			char mult = array[lineInd];
+//			total = total + mult;
+//		 	lineInd++;
+//			}
+//			}
 
 					    		
 					    		
@@ -79,23 +79,23 @@ public class RegularExpressions {
 		    	
 		    	
 		    	
-		    				if(check) 
-		    				    {
-				    			if(total == "")
-		    					{
-		    						break;
-		    					}
-		    					System.out.println("Match found on Line " + lineCount + ", position " + (lineInd) + " " + total + " ");	
-		    					break;
-		    				}
-		    						    	}
+			if(check) 
+		    {
+			if(total == "")
+			{
+			break;
+			}
+		    System.out.println("Match found on Line " + lineCount + ", position " + (lineInd) + " " + total + " ");	
+			break;
+			}
+	 	}
 		 }	    
-		    myText.close();
-		    System.out.println(); 			//Space 
+		myText.close();
+	    System.out.println(); 			//Space 
 }catch(FileNotFoundException e) {
-	System.out.println("File not found");
-}
-		  }		  
+		System.out.println("File not found");
+     } 
+  }		  
 }
 //if (regex[posInd+1] == '*')    //PLUS
 //{
