@@ -47,10 +47,7 @@ public class RegularExpressions {
 	    	{
 	    	check = false;
 	    	break; 
-	        }	
-
-		   
-
+	        }
 		    	    		
 		 if (array[lineInd] == regex[posInd]) //if next position isnt equal to next pos in input, increase pos
 			{
@@ -69,15 +66,9 @@ public class RegularExpressions {
 //			total = total + mult;
 //		 	lineInd++;
 //			}
-//			}
+//			}			    			    		
 
-					    		
-					    		
-
-} //While loop Bracket
-		    	
-		    	
-		    	
+} //While loop Bracket   	
 		    	
 			if(check) 
 		    {
